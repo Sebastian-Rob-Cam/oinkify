@@ -1,3 +1,9 @@
+fn vowel_check(word: &String) -> bool {
+    word.to_lowercase().starts_with(&['a', 'e', 'i', 'o', 'u'])
+}
+
 fn main() {
-    println!("Hello, world!");
+    // wtt = word_to_test
+    let wtt_vowel_function = String::from("Eat");
+    assert!(vowel_check(&wtt_vowel_function));
 }
