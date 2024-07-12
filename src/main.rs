@@ -36,6 +36,10 @@ fn hay_treatment(word: String) -> String {
 
 fn main() {
     // wtt = word_to_test
-    let wtt_vowel_function = String::from("Eat");
-    assert!(vowel_check(&wtt_vowel_function));
+    let _wtt_vowel_function = String::from("Eat");
+
+    let wtt_consonant_function = String::from("first");
+    //assert!(vowel_check(&wtt_vowel_function));
+
+    println!("{}", ay_treatment(wtt_consonant_function));
 }
