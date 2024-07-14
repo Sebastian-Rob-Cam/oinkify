@@ -1,4 +1,5 @@
 use std::collections::BTreeMap;
+use std::io;
 
 fn vowel_check(word: &String) -> bool {
     word.to_lowercase().starts_with(&['a', 'e', 'i', 'o', 'u'])
@@ -35,11 +36,19 @@ fn hay_treatment(word: String) -> String {
 }
 
 fn main() {
-    // wtt = word_to_test
-    let _wtt_vowel_function = String::from("Eat");
+    // Flow control for the user's word
+    let mut user_word = String::new();
 
-    let wtt_consonant_function = String::from("first");
-    //assert!(vowel_check(&wtt_vowel_function));
+    io::stdin()
+        .read_line(&mut user_word)
+        .expect("This isn't a word");
 
-    println!("{}", ay_treatment(wtt_consonant_function));
+    match vowel_check(&user_word) {
+        true => {
+            println!("{}", hay_treatment(user_word));
+        }
+        false => {
+            println!("{}", ay_treatment(user_word));
+        }
+    };
 }
