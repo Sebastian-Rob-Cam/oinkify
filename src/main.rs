@@ -48,12 +48,14 @@ fn main() {
         .read_line(&mut user_word)
         .expect("This isn't a word");
 
-    match vowel_check(&user_word) {
-        true => {
-            println!("{}", hay_treatment(user_word));
-        }
-        false => {
-            println!("{}", ay_treatment(user_word));
-        }
+    // Trim the newline character from the input
+    let user_word = user_word.trim();
+
+    let result = if vowel_check(user_word) {
+        hay_treatment(user_word)
+    } else {
+        ay_treatment(user_word)
     };
+
+    println!("{}", result);
 }
