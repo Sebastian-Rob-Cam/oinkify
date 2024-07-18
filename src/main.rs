@@ -34,9 +34,7 @@ fn ay_treatment(word: String) -> String {
 }
 
 fn hay_treatment(word: String) -> String {
-    let s = format!("{word}-hay");
-
-    s
+    format!("{}-hay", word)
 }
 
 fn main() {
