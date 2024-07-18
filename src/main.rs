@@ -5,11 +5,11 @@
 use std::collections::BTreeMap;
 use std::io;
 
-fn vowel_check(word: &String) -> bool {
+fn vowel_check(word: &str) -> bool {
     word.to_lowercase().starts_with(&['a', 'e', 'i', 'o', 'u'])
 }
 
-fn ay_treatment(word: String) -> String {
+fn ay_treatment(word: &str) -> String {
     let mut chars_btreemap: BTreeMap<i32, char> = BTreeMap::new();
     let mut result_string: String = String::new();
     let mut count: i32 = 0;
@@ -33,7 +33,7 @@ fn ay_treatment(word: String) -> String {
     result_string
 }
 
-fn hay_treatment(word: String) -> String {
+fn hay_treatment(word: &str) -> String {
     format!("{}-hay", word)
 }
 
