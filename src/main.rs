@@ -42,7 +42,7 @@ fn main() {
     let mut user_word = String::new();
 
     // Print the instructions to use the program
-    println!("Write any word: \n");
+    println!("Write any word: ");
     // Take the user's input
     io::stdin()
         .read_line(&mut user_word)
