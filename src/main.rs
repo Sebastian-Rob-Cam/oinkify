@@ -41,6 +41,9 @@ fn main() {
     // Flow control for the user's word
     let mut user_word = String::new();
 
+    // Print the instructions to use the program
+    println!("Write any word: \n");
+    // Take the user's input
     io::stdin()
         .read_line(&mut user_word)
         .expect("This isn't a word");
